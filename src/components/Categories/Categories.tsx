@@ -25,7 +25,6 @@ const Categories: React.FC = observer(() => {
       {categories.map((item: string, index) => (
         <CategoriesButton
           key={index + " " + item}
-          onClick={() => onClickCategory(item)}
           text={item}
           activeCategory={category.activeCategory}
         />

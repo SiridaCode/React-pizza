@@ -1,5 +1,4 @@
 import { makeAutoObservable } from "mobx";
-import { IPizza } from "./types";
 
 class Pizza {
   activeCategory: string = "Все";

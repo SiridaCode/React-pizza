@@ -34,7 +34,7 @@ const PizzaCard: React.FC<IPizza> = (pizza) => {
               <li
                 key={size + index}
                 onClick={() => setActiveSize(size)}
-                className={cn(classes["size"], {
+                className={cn(classes["size--dough"], {
                   [classes.active]: activeSize === size,
                 })}
               >

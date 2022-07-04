@@ -1,5 +1,4 @@
 import BasketButton from "../UI/Buttons/BasketButton";
-import Button from "../UI/Buttons/CardButton";
 import CustomSearch from "../UI/CustomSearch/CustomSearch";
 import classes from "./Header.module.scss";
 

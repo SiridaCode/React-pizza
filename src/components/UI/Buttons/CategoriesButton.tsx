@@ -5,7 +5,6 @@ import category from "../../../store/categories";
 type CategoriesButtonProps = {
   text: string;
   activeCategory: string;
-  onClick: any;
   key: any;
 };
 
