@@ -1,0 +1,21 @@
+.button {
+  min-width: 100px;
+  border-radius: 30px;
+  background-color: #fff;
+  border: 1px solid#fe5f1e;
+  color: #fe5f1e;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+
+  .image {
+    margin-right: 10px;
+    width: 12px;
+  }
+}
+
+.button:hover {
+  background-color: #fe5f1e;
+  color: #fff;
+  transition: all 0.15s ease-in-out;
+}
