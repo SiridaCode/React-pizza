@@ -6,6 +6,7 @@ import { IPizza } from "../../store/types";
 import classes from "./PizzaBlock.module.scss";
 import Categories from "../Categories/Categories";
 import Sort from "../Sort/Sort";
+
 const PizzaBlock: React.FC = observer(() => {
   useEffect(() => {
     pizza.fetchPizza();

@@ -1,6 +1,6 @@
 import classes from "./BasketButton.module.scss";
 
-const BasketButton = () => {
+const BasketButton: React.FC = () => {
   return (
     <button className={classes["button"]}>
       <span> 0р</span>

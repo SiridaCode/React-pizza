@@ -1,21 +1,36 @@
 import classes from "./Categories.module.scss";
-import CardButton from "../UI/Buttons/CardButton";
 import CategoriesButton from "../UI/Buttons/CategoriesButton";
+import cn from "classnames";
+import { useState } from "react";
 
-const categories = [
-  "Все",
-  "Мясные",
-  "Вегетарианская",
-  "Гриль",
-  "Острые",
-  "Закрытые",
-];
+type categoriesProps = {
+  category: string;
+  active: boolean;
+};
 
 const Categories: React.FC = () => {
+  const categories = [
+    { category: "Все", active: false },
+    { category: "Мясные", active: false },
+    { category: "Вегетарианская", active: false },
+    { category: "Гриль", active: false },
+    { category: "Острые", active: false },
+    { category: "Закрытые", active: false },
+  ];
+  const [stateCategories, setStateCategories] = useState(categories);
+
+  const onClickCategory = (category: string) => {
+    setStateCategories([...stateCategories]);
+  };
+
   return (
     <>
-      {categories.map((category, index) => (
-        <CategoriesButton text={category} />
+      {categories.map((item: categoriesProps, index) => (
+        <CategoriesButton
+          onClick={() => onClickCategory(item.category)}
+          text={item.category}
+          active={item.active}
+        />
       ))}
     </>
   );
