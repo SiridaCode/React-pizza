@@ -1,3 +1,19 @@
+@mixin selector_types {
+  display: flex;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+}
+
+@mixin selector_active {
+  background: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+}
+
 .container {
   margin-bottom: 65px;
   transition: all 0.2s ease-in-out;
@@ -21,8 +37,10 @@
     width: 260px;
   }
 
-  .selector ul:first-of-type {
-    margin-bottom: 6px;
+  .selector ul {
+    &:first-of-type {
+      margin-bottom: 6px;
+    }
   }
 
   .selector {
@@ -31,30 +49,18 @@
     display: flex;
     padding: 6px;
     flex-direction: column;
-    -webkit-touch-callout: none;
     cursor: pointer;
     flex: 1 1;
     font-size: 14px;
     font-weight: 600;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 
     .types {
-      display: flex;
-      font-size: 15px;
-      padding: 0px;
-      margin: 0px;
+      @include selector_types;
       margin-bottom: 5px;
 
       .active {
-        background: #fff;
-        border-radius: 6px;
-        font-size: 14px;
+        @include selector_active;
         font-weight: 600;
-        border-radius: 5px;
-        padding: 8px;
-        width: 100%;
       }
 
       .type--dough {
@@ -66,18 +72,10 @@
     }
 
     .sizes {
-      display: flex;
-      font-size: 15px;
-      padding: 0px;
-      margin: 0px;
+      @include selector_types;
 
       .active {
-        background: #fff;
-        border-radius: 6px;
-        font-size: 14px;
-        border-radius: 5px;
-        padding: 8px;
-        width: 100%;
+        @include selector_active;
       }
 
       .size--dough {
