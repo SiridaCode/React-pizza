@@ -14,11 +14,6 @@ const Categories: React.FC = observer(() => {
     "Острые",
     "Закрытые",
   ];
-  const [stateCategories, setStateCategories] = useState(categories);
-  console.log(category.activeCategory);
-  const onClickCategory = (category: string) => {
-    setStateCategories([...stateCategories]);
-  };
 
   return (
     <div className={classes["container-category"]}>

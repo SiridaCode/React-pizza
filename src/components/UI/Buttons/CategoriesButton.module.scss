@@ -11,12 +11,12 @@
     margin-right: 10px;
     width: 12px;
   }
-}
 
-.button:hover:not(.active) {
-  border-radius: 30px;
-  background-color: #dbd6d6;
-  transition: all 0.15s ease-in-out;
+  &:hover:not(.active) {
+    border-radius: 30px;
+    background-color: #dbd6d6;
+    transition: all 0.15s ease-in-out;
+  }
 }
 
 .active {

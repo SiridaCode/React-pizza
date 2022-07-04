@@ -12,10 +12,10 @@
     margin-right: 10px;
     width: 12px;
   }
-}
 
-.button:hover {
-  background-color: #fe5f1e;
-  color: #fff;
-  transition: all 0.15s ease-in-out;
+  &:hover {
+    background-color: #fe5f1e;
+    color: #fff;
+    transition: all 0.15s ease-in-out;
+  }
 }

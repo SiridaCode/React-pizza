@@ -6,6 +6,10 @@
   font-family: "Fredoka", sans-serif;
   margin: 20px auto;
 
+  &:hover {
+    transform: scale(1.03);
+  }
+
   .title {
     font-size: 20px;
     font-weight: 900;
@@ -94,8 +98,4 @@
       font-size: 22px;
     }
   }
-}
-
-.container:hover {
-  transform: scale(1.03);
 }
