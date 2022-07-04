@@ -2,39 +2,36 @@ import classes from "./Categories.module.scss";
 import CategoriesButton from "../UI/Buttons/CategoriesButton";
 import cn from "classnames";
 import { useState } from "react";
+import { observer } from "mobx-react-lite";
+import category from "../../store/categories";
 
-type categoriesProps = {
-  category: string;
-  active: boolean;
-};
-
-const Categories: React.FC = () => {
+const Categories: React.FC = observer(() => {
   const categories = [
-    { category: "Все", active: false },
-    { category: "Мясные", active: false },
-    { category: "Вегетарианская", active: false },
-    { category: "Гриль", active: false },
-    { category: "Острые", active: false },
-    { category: "Закрытые", active: false },
+    "Все",
+    "Мясные",
+    "Вегетарианская",
+    "Гриль",
+    "Острые",
+    "Закрытые",
   ];
   const [stateCategories, setStateCategories] = useState(categories);
-
+  console.log(category.activeCategory);
   const onClickCategory = (category: string) => {
     setStateCategories([...stateCategories]);
   };
 
   return (
     <div className={classes["container-category"]}>
-      {categories.map((item: categoriesProps, index) => (
+      {categories.map((item: string, index) => (
         <CategoriesButton
           key={index + " " + item}
-          onClick={() => onClickCategory(item.category)}
-          text={item.category}
-          active={item.active}
+          onClick={() => onClickCategory(item)}
+          text={item}
+          activeCategory={category.activeCategory}
         />
       ))}
     </div>
   );
-};
+});
 
 export default Categories;

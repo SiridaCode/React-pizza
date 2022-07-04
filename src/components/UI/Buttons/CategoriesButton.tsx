@@ -1,24 +1,29 @@
-import classNames from "classnames";
+import cn from "classnames";
 import classes from "./CategoriesButton.module.scss";
+import category from "../../../store/categories";
 
 type CategoriesButtonProps = {
   text: string;
-  active: boolean;
+  activeCategory: string;
   onClick: any;
   key: any;
 };
 
 const CategoriesButton: React.FC<CategoriesButtonProps> = ({
   text,
-  active,
+  activeCategory,
 }) => {
+  const classActive = cn(classes.button, {
+    [classes.active]: activeCategory === text,
+  });
+
   const onClickCategory = () => {
-    classNames({ button: true, active: active });
+    category.setActiveCategory(text);
   };
 
   return (
     <>
-      <button onClick={onClickCategory} className={classes["button"]}>
+      <button onClick={onClickCategory} className={classActive}>
         <span className={classes["text"]}>{text}</span>
       </button>
     </>

@@ -1,10 +1,15 @@
 import classes from "./PizzaCard.module.scss";
 import { IPizza } from "../../store/types";
 import { type } from "os";
-import classNames from "classnames";
+import cn from "classnames";
 import Button from "../UI/Buttons/CardButton";
+import { useState } from "react";
 
 const PizzaCard: React.FC<IPizza> = (pizza) => {
+  const typeNames = ["тонкое", "традиционное"];
+  const [activeType, setActiveType] = useState(0);
+  const [activeSize, setActiveSize] = useState(0);
+
   return (
     <>
       <div className={classes.container}>
@@ -13,14 +18,26 @@ const PizzaCard: React.FC<IPizza> = (pizza) => {
         <div className={classes.selector}>
           <ul className={classes.types}>
             {pizza.types.map((type, index) => (
-              <li key={type + index} className={classes.type}>
-                {type === 0 ? "тонкое" : "традиционное"}
+              <li
+                key={type + index}
+                onClick={() => setActiveType(type)}
+                className={cn(classes["type--dough"], {
+                  [classes.active]: activeType === type,
+                })}
+              >
+                {typeNames[type]}
               </li>
             ))}
           </ul>
           <ul className={classes.sizes}>
             {pizza.sizes.map((size, index) => (
-              <li key={size + index} className={classes.size}>
+              <li
+                key={size + index}
+                onClick={() => setActiveSize(size)}
+                className={cn(classes["size"], {
+                  [classes.active]: activeSize === size,
+                })}
+              >
                 {size + " см."}
               </li>
             ))}
