@@ -2,9 +2,10 @@ import classes from "./Sort.module.scss";
 
 const Sort = () => {
   return (
-    <>
-      <div>Сортировка по популярности</div>
-    </>
+    <div>
+      <b>Сортировка по: </b>
+      <span className={classes["sort"]}>популярности</span>
+    </div>
   );
 };
 

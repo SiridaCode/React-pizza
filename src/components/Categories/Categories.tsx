@@ -24,15 +24,16 @@ const Categories: React.FC = () => {
   };
 
   return (
-    <>
+    <div className={classes["container-category"]}>
       {categories.map((item: categoriesProps, index) => (
         <CategoriesButton
+          key={index + " " + item}
           onClick={() => onClickCategory(item.category)}
           text={item.category}
           active={item.active}
         />
       ))}
-    </>
+    </div>
   );
 };
 

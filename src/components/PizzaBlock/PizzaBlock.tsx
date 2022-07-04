@@ -19,7 +19,7 @@ const PizzaBlock: React.FC = observer(() => {
         <Sort />
       </div>
       <div className={classes["container-pizza"]}>
-        {pizza.pizzas.map((item: IPizza) => (
+        {pizza.pizzas.slice(0, 4).map((item: IPizza) => (
           <PizzaCard key={item.id} {...item} />
         ))}
       </div>

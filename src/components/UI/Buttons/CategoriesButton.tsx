@@ -5,6 +5,7 @@ type CategoriesButtonProps = {
   text: string;
   active: boolean;
   onClick: any;
+  key: any;
 };
 
 const CategoriesButton: React.FC<CategoriesButtonProps> = ({
@@ -18,12 +19,6 @@ const CategoriesButton: React.FC<CategoriesButtonProps> = ({
   return (
     <>
       <button onClick={onClickCategory} className={classes["button"]}>
-        <img
-          width="30px"
-          className={classes["image"]}
-          src="./plus.png"
-          alt="Плюс"
-        />
         <span className={classes["text"]}>{text}</span>
       </button>
     </>
