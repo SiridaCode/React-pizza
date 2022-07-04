@@ -1,6 +1,5 @@
 import classes from "./PizzaCard.module.scss";
 import { IPizza } from "../../store/types";
-import { type } from "os";
 import cn from "classnames";
 import Button from "../UI/Buttons/CardButton";
 import { useState } from "react";
