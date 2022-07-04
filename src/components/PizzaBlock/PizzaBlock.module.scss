@@ -1,4 +1,15 @@
-.container {
+.main-container {
+  padding: 40px 0;
+}
+
+.content-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+}
+.container-pizza {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

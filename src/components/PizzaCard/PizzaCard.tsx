@@ -4,10 +4,6 @@ import { type } from "os";
 import classNames from "classnames";
 import Button from "../UI/Buttons/CardButton";
 
-const renderTypeOfDough = (type: number) => {
-  return type === 0 ? "тонкое" : "традиционное";
-};
-
 const PizzaCard: React.FC<IPizza> = (pizza) => {
   return (
     <>
@@ -18,7 +14,7 @@ const PizzaCard: React.FC<IPizza> = (pizza) => {
           <ul className={classes.types}>
             {pizza.types.map((type, index) => (
               <li key={type + index} className={classes.type}>
-                {renderTypeOfDough(type)}
+                {type === 0 ? "тонкое" : "традиционное"}
               </li>
             ))}
           </ul>

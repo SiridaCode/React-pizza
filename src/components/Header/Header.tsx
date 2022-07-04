@@ -7,10 +7,7 @@ const Header = () => {
   return (
     <header className={classes["header"]}>
       <div className={classes["logo-container"]}>
-        <img
-          width="38px"
-          src="https://react-pizza-v2.vercel.app/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg"
-        />
+        <img width="38px" src="./pizza_logo.svg" />
         <div>
           <h1 className={classes["logo"]}>React Pizza v2</h1>
           <p>Самая вкусная пицца во вселенной</p>

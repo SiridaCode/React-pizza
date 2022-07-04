@@ -1,0 +1,24 @@
+.button {
+  min-width: 100px;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  .image {
+    margin-right: 10px;
+    width: 12px;
+  }
+}
+
+.button:first-child {
+  background-color: #282828;
+  color: #fff;
+}
+
+.button:hover:not(.button:first-child) {
+  border-radius: 30px;
+  background-color: #b6b4b4;
+  transition: all 0.15s ease-in-out;
+}
