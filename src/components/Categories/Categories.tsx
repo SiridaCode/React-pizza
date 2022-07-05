@@ -15,7 +15,7 @@ const Categories: React.FC = observer(() => {
 
   return (
     <div className={classes["container-category"]}>
-      {categories.map((item: string, index) => (
+      {categories.map((item: string, index: number) => (
         <CategoriesButton
           key={index + " " + item}
           text={item}

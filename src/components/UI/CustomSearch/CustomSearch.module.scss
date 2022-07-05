@@ -1,17 +1,21 @@
-.search-input {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  font-size: 16px;
-  padding: 12px 20px 12px 42px;
-  width: 400px;
-  outline: none;
-}
+.search-container {
+  position: relative;
 
-.search-icon {
-  height: 22px;
-  left: 14px;
-  opacity: 0.3;
-  position: absolute;
-  top: 12px;
-  width: 22px;
+  .search-input {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 12px 20px 12px 42px;
+    width: 400px;
+    outline: none;
+  }
+
+  .search-icon {
+    height: 22px;
+    left: 14px;
+    opacity: 0.3;
+    position: absolute;
+    top: 12px;
+    width: 22px;
+  }
 }

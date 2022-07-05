@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classes from "./Sort.module.scss";
 
-const Sort = () => {
+const Sort: React.FC = () => {
   const [openSelect, setOpenSelect] = useState(false);
   return (
     <div>

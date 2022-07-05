@@ -1,12 +1,20 @@
 import classes from "./BasketButton.module.scss";
 
-const BasketButton: React.FC = () => {
+type BasketButtonProps = {
+  firstText: string;
+  secondText: string;
+};
+
+const BasketButton: React.FC<BasketButtonProps> = ({
+  firstText,
+  secondText,
+}) => {
   return (
     <button className={classes["button"]}>
-      <span> 0р</span>
+      <span>{firstText}</span>
       <div className={classes["button-divider"]} />
       <img className={classes["image"]} src="./plus.png" alt="Плюс" />
-      <span className={classes["text"]}>0 шт</span>
+      <span className={classes["text"]}>{secondText}</span>
     </button>
   );
 };

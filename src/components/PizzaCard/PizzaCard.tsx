@@ -9,6 +9,13 @@ const PizzaCard: React.FC<IPizza> = (pizza) => {
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
 
+  const classActive = (className: string, typeOrSizeId: number) => {
+    const state = className === "type--dough" ? activeType : activeSize;
+    return cn(classes[className], {
+      [classes.active]: state === typeOrSizeId,
+    });
+  };
+
   return (
     <>
       <div className={classes.container}>
@@ -20,9 +27,7 @@ const PizzaCard: React.FC<IPizza> = (pizza) => {
               <li
                 key={type + index}
                 onClick={() => setActiveType(type)}
-                className={cn(classes["type--dough"], {
-                  [classes.active]: activeType === type,
-                })}
+                className={classActive("type--dough", type)}
               >
                 {typeNames[type]}
               </li>
@@ -33,9 +38,7 @@ const PizzaCard: React.FC<IPizza> = (pizza) => {
               <li
                 key={size + index}
                 onClick={() => setActiveSize(size)}
-                className={cn(classes["size--dough"], {
-                  [classes.active]: activeSize === size,
-                })}
+                className={classActive("size--dough", size)}
               >
                 {size + " см."}
               </li>

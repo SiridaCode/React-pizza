@@ -13,7 +13,7 @@ const Header = () => {
         </div>
       </div>
       <CustomSearch />
-      <BasketButton />
+      <BasketButton firstText="0 ₽" secondText="0 шт" />
     </header>
   );
 };
